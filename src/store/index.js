@@ -4,7 +4,7 @@ import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 
 //reducers
 import listReducer from './../reducers/list'
-import formReducer from '../../form/reducers/form'
+import formReducer from '../../../react-form/src/reducers/form'
 
 const rootReducer = combineReducers({
 	list: listReducer,

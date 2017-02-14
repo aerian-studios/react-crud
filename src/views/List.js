@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from '../components/Menu'
 import List from '../containers/List'
-import Form from '../../form/containers/Form'
+import Form from '../../../react-form/src/containers/Form'
 import config from 'react-global-configuration'
 import configHelper from '../utils/configHelper'
 
