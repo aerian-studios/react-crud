@@ -14,10 +14,12 @@ class ListPage extends React.Component {
         return (
             <div>
                 <Menu />
-                <List
-                    listDataUrl={ configHelper.getListDataUrl(config, this.props.params.entity) }
-                    entity={ this.props.params.entity }
-                />
+                <div className="col-sm-7">
+                    <List
+                        listDataUrl={ configHelper.getListDataUrl(config, this.props.params.entity) }
+                        entity={ this.props.params.entity }
+                    />
+                </div>
                 { this.renderDetails() }
             </div>
         )
@@ -25,11 +27,22 @@ class ListPage extends React.Component {
 
     renderDetails() {
         let entityId = this.props.params.entityId
-        if (entityId) {
+        if (this.entitySelected()) {
             return (
-                <Form entity={this.props.params.entity} entityId={entityId} />
+                <div className="col-sm-5">
+                    <h3>Edit { configHelper.getEntityLabel(config, this.props.params.entity, false) }</h3>
+                    <Form entity={this.props.params.entity} entityId={entityId} />
+                </div>
             )
         }
+    }
+
+    /**
+     * returns true if a specific entity is selected
+     * @return boolean
+     */
+    entitySelected() {
+        return (typeof this.props.params.entityId !== 'undefined')
     }
 }
 

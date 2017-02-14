@@ -18,7 +18,7 @@ class List extends React.Component {
             return (
                 <div>
                     <h2>{ configHelper.getEntityLabel(config, this.props.entity) }</h2>
-                    <table>
+                    <table className="table table-striped">
                         <thead>
                         <tr>
                             {
@@ -50,7 +50,7 @@ class List extends React.Component {
                         <td key={itemId+column}>{this.props.items[itemId][column]}</td>
                     )
                 }
-                <td><Link to={this.props.entity + '/edit/' + itemId}>edit</Link></td>
+                <td><Link to={this.props.entity + '/edit/' + itemId} className="btn btn-sm btn-default">edit</Link></td>
             </tr>
         )
     }
