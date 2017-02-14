@@ -8,14 +8,16 @@ class Menu extends React.Component {
     render() {
         let entities = config.get('entities')
         return (
-            <ul>
+            //@todo the menu is currently just disabled because we're rendering this crud app in a wider app which has it's own menu. Need a strategy
+            <span></span>
+            /*<ul>
                 <li><Link to={''}>Home</Link></li>
                 {
                     entities.ids.map(entity =>
                         <li key={entity}><Link to={entity}>{ configHelper.getEntityLabel(config, entity) }</Link></li>
                     )
                 }
-            </ul>
+            </ul>*/
         )
     }
 }
