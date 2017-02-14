@@ -12,6 +12,7 @@ import ListPageContainer from './views/List'
 import { store, history } from './store'
 
 //set up config
+//@todo this needs to be outside this library and passed in, or loaded in from an API
 config.set(
     {
         baseUrl: '/api',
