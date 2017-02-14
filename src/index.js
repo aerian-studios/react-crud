@@ -16,9 +16,9 @@ config.set(
     {
         baseUrl: '/api',
         entities: {
-            ids: ['package'],
+            ids: ['plugin'],
             byId: {
-                'package': {},
+                'plugin': {},
             }
         }
     }
