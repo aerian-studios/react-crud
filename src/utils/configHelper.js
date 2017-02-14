@@ -8,10 +8,11 @@ function ucfirst(string) {
 
 const configHelper = {
 
-    getEntityLabel(config, entity) {
+    getEntityLabel(config, entity, plural = true) {
         //@todo validate input
         let labelFromConfig = config.get('entities').byId[entity].label
-        return labelFromConfig ? labelFromConfig : ucfirst(pluralize(entity))
+        let label = labelFromConfig ? labelFromConfig : ucfirst(entity)
+        return plural ? pluralize(label) : label
     },
 
     getListDataUrl(config, entity) {
