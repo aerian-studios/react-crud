@@ -14,15 +14,11 @@ import { store, history } from './store'
 //set up config
 config.set(
     {
-        baseUrl: '',
+        baseUrl: '/api',
         entities: {
-            ids: ['member', 'post'],
+            ids: ['package'],
             byId: {
-                'member': {
-                    'label': 'Members',
-                    'listDataUrl': '/member'
-                },
-                'post': {}
+                'package': {},
             }
         }
     }
